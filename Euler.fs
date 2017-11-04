@@ -132,7 +132,7 @@ module Problem7 =
 
     let nthPrime n =
         Extras.primesUpTo UInt64.MaxValue
-        |> Seq.nth (n - 1)
+        |> Seq.item (n - 1)
 
     let result = Extras.duration 7 (fun _ -> nthPrime 10001)
     printfn "%u" result
@@ -185,4 +185,4 @@ module Problem9 =
     let result = Extras.duration 9 (fun _ ->  solution 25)
     match result with
     | Some(a) -> printfn "%A" a
-    | _ -> printfn "You dun fucked up"
+    | _ -> printfn "Something's wrong..."
